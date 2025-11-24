@@ -188,7 +188,7 @@ function Works() {
       "
     >
       <div
-        className="absolute inset-0 bg-center bg-cover opacity-[0.05] mix-blend-darken"
+        className="absolute inset-0 bg-center bg-cover opacity-[0.04] mix-blend-darken"
         style={{ backgroundImage: "url('./bgs/bg2.jpg')" }}
       ></div>
       <h1 className=" font-nycd mb-[-100px] md:mb-[0px] text-6xl font-bold  ">

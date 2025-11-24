@@ -51,14 +51,6 @@ export default function Presentation({intro=0}) {
        section bg-main b relative  overflow-hidden
       "
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.2] mix-blend-darken "
-        src="./bgs/bg1.webm"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
 
       <div className="container w-[85%] flex flex-col   ">
         <motion.div

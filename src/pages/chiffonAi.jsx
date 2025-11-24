@@ -46,7 +46,7 @@ export default function ChiffonAi({ time }) {
     <>
       <div
         id="luthiAi"
-        className="bg-main   fixed inset-0 flex flex-col justify-center items-center z-[999] h-screen"
+        className="bg-white   fixed inset-0 flex flex-col justify-center items-center z-[999] h-screen"
       >
         <h1 className="text-5xl md:text-8xl mb-5 font-bold">Chiffon AI</h1>
         <div
