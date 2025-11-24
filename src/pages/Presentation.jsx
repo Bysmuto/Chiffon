@@ -7,10 +7,10 @@ const texts = [
 
 const displayText = texts.join(" • ");
 
-const intro = 5.5
 
 
-function InfiniteCarousel({ delay = 0 }) {
+
+function InfiniteCarousel({ delay = 0, }) {
   // Define your text content
 
   return (
@@ -44,7 +44,7 @@ function InfiniteCarousel({ delay = 0 }) {
     </motion.div>
   );
 }
-export default function Presentation() {
+export default function Presentation({intro=0}) {
   return (
     <div
       className="
@@ -52,7 +52,7 @@ export default function Presentation() {
       "
     >
       <video
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.2] mix-blend-darken -z-50 "
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.2] mix-blend-darken "
         src="./bgs/bg1.webm"
         autoPlay
         loop

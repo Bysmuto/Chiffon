@@ -68,7 +68,7 @@ const LogoCarousel = ({ logos = [], speed = 20, className = "", color }) => {
         {infiniteLogos.map((logo, index) => (
           <div
             key={index}
-            className={`mx-4 flex-shrink-0 flex flex-col items-center justify-center`}
+            className={`mx-4 min-w-[120px] flex-shrink-0 flex flex-col items-center justify-center`}
           >
             <div
               className={`flex items-center justify-center  ${className}`}
@@ -87,7 +87,7 @@ const LogoCarousel = ({ logos = [], speed = 20, className = "", color }) => {
 
 function Brands() {
   return (
-    <div className="section  bg-white relative overflow-hidden mb-16">
+    <div className="section  bg-white relative overflow-hidden md:mb-1 ">
       <div className="absolute opacity-[0.12] inset-0 flex flex-col justify-between pointer-events-none">
         <LogoCarousel speed={40} logos={logos} className="h-[50px]   " />
 

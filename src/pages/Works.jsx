@@ -184,11 +184,11 @@ function Works() {
   return (
     <div
       className="
-       section bg-white relative mb-[-50px]  md:mb-16
+       section bg-white relative mb-[-50px]  md:mb-1
       "
     >
       <div
-        className="absolute inset-0 bg-center bg-cover opacity-[0.05] -z-50 mix-blend-darken"
+        className="absolute inset-0 bg-center bg-cover opacity-[0.05] mix-blend-darken"
         style={{ backgroundImage: "url('./bgs/bg2.jpg')" }}
       ></div>
       <h1 className=" font-nycd mb-[-100px] md:mb-[0px] text-6xl font-bold  ">

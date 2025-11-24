@@ -91,9 +91,9 @@ function Todevelop() {
   
   return (
     <>
-      <div className="section mb-16  bg-black relative">
+      <div className="section md:mb-18  bg-black relative">
         <video
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15] -z-50 "
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15]  "
           src="./bgs/bg3.webm"
           autoPlay
           loop
