@@ -40,34 +40,51 @@ export default function ChiffonAi({ time }) {
 
   if (!show) return null;
 
-  const text = "I need well made and realiable AI video ";
-  const speed = 70;
+  const speed = 80;
 
   return (
     <>
       <div
         id="luthiAi"
-        className="bg-[var(--color1)]  fixed inset-0 flex flex-col justify-center items-center z-[999] h-screen"
+        className="bg-main   fixed inset-0 flex flex-col justify-center items-center z-[999] h-screen"
       >
-        <h1 className="text-7xl md:text-9xl mb-5 font-anton">Chiffon IA</h1>
+        <h1 className="text-5xl md:text-8xl mb-5 font-bold">Chiffon AI</h1>
         <div
           id="prompt"
-          className="flex items-center px-4 py-4 border-2 border-black rounded-full w-[40%] bg-[#f5f7ec]"
+          // Changed w-[90%] to w-[95%] for more room on mobile
+          // Added 'gap-2' to space things out automatically
+          className="flex items-center gap-2 px-3 py-3 border-2 border-black rounded-full w-[95%] md:w-[40%] bg-white"
         >
-          <div className="rounded-full mr-1 p-1 flex items-center justify-center">
+          {/* Added shrink-0 so this icon never gets squished */}
+          <div className="rounded-full flex items-center justify-center shrink-0">
             <Plus size={22} />
           </div>
 
-          <div id="promptText" className="font-verdana min-w-[80%]  text-[16px]">
-            <Typing text={text} speed={speed} />
+          {/* THE FIX: Changed min-w-[80%] to flex-1 */}
+          {/* This lets it take up whatever space is left over */}
+          <div
+            id="promptText"
+            className="flex-1 font-verdana text-[15px] md:text-[16px] overflow-hidden"
+          >
+            <div className="block md:hidden">
+              <Typing text="I need well made AI video" speed={speed} />
+            </div>
+
+            {/* Desktop Typing */}
+            <div className="hidden md:block">
+              <Typing text="I need well made and reliable AI video" speed={speed} />
+            </div>
           </div>
 
-          <div className="rounded-full  mr-1 p-1  flex items-center justify-center">
-            <Mic size={22} />
-          </div>
+          {/* Grouped the right icons so they stay together nicely */}
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="rounded-full flex items-center justify-center">
+              <Mic size={22} />
+            </div>
 
-          <div className="bg-black text-white mr-2 rounded-full p-1 flex items-center justify-center">
-            <ArrowUp size={22} />
+            <div className="bg-black text-white rounded-full p-1 flex items-center justify-center">
+              <ArrowUp size={22} />
+            </div>
           </div>
         </div>
       </div>

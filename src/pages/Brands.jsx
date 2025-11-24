@@ -1,5 +1,6 @@
 import { useId } from "react";
 import { HandwrittenEffect } from "../funcs/Textfx";
+import { motion } from "framer-motion";
 const logos = [
   {
     name: "",
@@ -35,7 +36,7 @@ const logos = [
   }
 ];
 
-const LogoCarousel = ({ logos = [], speed = 20, className = "",color }) => {
+const LogoCarousel = ({ logos = [], speed = 20, className = "", color }) => {
   // Use React's hook to guarantee a unique ID for this instance
   const uniqueId = useId();
 
@@ -69,8 +70,9 @@ const LogoCarousel = ({ logos = [], speed = 20, className = "",color }) => {
             key={index}
             className={`mx-4 flex-shrink-0 flex flex-col items-center justify-center`}
           >
-            <div className={`flex items-center justify-center  ${className}`} 
-              style={{ background:color}}
+            <div
+              className={`flex items-center justify-center  ${className}`}
+              style={{ background: color }}
             >
               {logo.icon}
             </div>
@@ -96,14 +98,59 @@ function Brands() {
         <LogoCarousel speed={40} logos={logos} className="h-[100px]  " />
       </div>
 
-      <div className="w-[70%] relativev z-10 flex flex-col">
-        <h1 className="font-nycd text-8xl text-center "><HandwrittenEffect text={'Brands'}/></h1>
-        <p className="mb-8 text-2xl font-anton  tracking-wide  text-center">
-          some of the companies that have trusted us with their visual production
-        </p>
-        <div className=" bg-[var(--color1)] bg-black p-3 rounded-lg">
-          <LogoCarousel speed={15} logos={logos} className="h-20 rounded-lg" color={'#feff88'}/>
-        </div>
+      <div className="w-[90%] p-1 md:w-[70%] relativev z-10 flex flex-col">
+        <h1 className="font-anton text-7xl md:text-8xl md:text-center ">
+          <HandwrittenEffect delay={0.5} text={"Brands"} />
+        </h1>
+        <motion.div
+          initial={{
+            x: -60, // Start 400px up in the air
+            opacity: 0 // Invisible
+            // Tilted left for character
+          }}
+          // 2. Trigger: When in view, drop to the ground
+          whileInView={{
+            x: 0, // Land on the ground line
+            opacity: 1 // Become visible
+            // Straighten out upon impact
+          }}
+          // 3. Run once when 50% visible
+          viewport={{ once: true, amount: 0.5 }}
+          // 4. The "Cartoon Physics" Engine
+          transition={{
+            type: "spring", // Use physics, not time duration
+            mass: 1.5, // Makes it feel heavy (slower bounces)
+            stiffness: 180, // How snappy the spring is
+            damping: 12, // How bouncy it is (lower = more bouncy)
+            delay: 0.6 // A tiny beat before dropping
+          }}
+        >
+          <p className="mb-3 text-xl md:text-2xl font-nycd  tracking-wide  md:text-center">
+            some of the companies that have trusted us with their visual production
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{
+            x: -120,
+            opacity: 0
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            type: "spring",
+            mass: 2.5,
+            stiffness: 180,
+            damping: 12,
+            delay: 1
+          }}
+          className="  bg-black p-3 rounded-lg"
+        >
+          <LogoCarousel speed={15} logos={logos} className="h-[60px]  md:h-20 rounded-lg" color={"#fdff73"} />
+        </motion.div>
       </div>
     </div>
   );

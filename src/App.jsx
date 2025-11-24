@@ -8,17 +8,15 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-  
-            <video
-          className="fixed inset-0 pointer-events-none z-[9999] w-full h-full object-cover opacity-[0.1] mix-blend-screen"
-          src="overlay.webm"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-      
-      <ChiffonAi time={4} />
+      <video
+        className="fixed inset-0 pointer-events-none z-[9999] w-full h-full object-cover opacity-[0.2] mix-blend-screen"
+        src="overlay.webm"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <ChiffonAi time={5.5} />
       <Presentation />
       <Works />
       <Todevelop />

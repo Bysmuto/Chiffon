@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
+
+
+ function HandwrittenEffect({text=[],delay=0}) {
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1, // Delay between each word
-      delayChildren: 0.2,   // Wait a bit before starting
+      delayChildren: delay,   // Wait a bit before starting
     },
   },
 };
@@ -27,7 +31,6 @@ const wordVariants = {
   },
 };
 
- function HandwrittenEffect({text=[]}) {
   return (
     <motion.div
       className=" overflow-hidden"

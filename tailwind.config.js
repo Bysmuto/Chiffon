@@ -8,7 +8,7 @@ export default {
         anton: ["Anton", "sans-serif"]
       },
       colors: {
-        main: "#feff88"
+        main: "#fdff73"
       },
       animation: {
         marquee: "marquee 25s linear infinite",
