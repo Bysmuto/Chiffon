@@ -92,14 +92,17 @@ function Todevelop() {
   return (
     <>
       <div className="section md:mb-18  bg-black relative">
-        <video
+        {/* <video
           className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15]  "
           src="./bgs/bg3.webm"
           autoPlay
           loop
           muted
           playsInline
-        />
+        /> */}
+        <img src="./bgs/bg3.webp" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15]  " />
+
+
         <div className="w-[80%]">
           <div className="text">
             <h2 className="text-white text-[32px] md:text-center mb-4 font-nycd">

@@ -15,11 +15,7 @@ const socials = [
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=chiffon@gmail.com&su=work&body=i%20am%20interested%20in%20working%20with%20you",
     icon: <Mail size={iconSize} />
   },
-  {
-    name: "Outlook",
-    url: "https://outlook.live.com/owa/?path=/mail/action/compose&to=email@example.com&subject=work&body=i%20am%20interested%20in%20working%20with%20you",
-    icon: <Mail size={iconSize} />
-  },
+
   {
     name: "Linkedin",
     url: "https://www.linkedin.com/",

@@ -91,7 +91,7 @@ function Carousel({ slides }) {
               </div>
               <div className="text-center space-y-1 md:space-y-2">
                 <h2 className="text-lg md:text-2xl font-bold font-anton tracking-wide">{slide.title}</h2>
-                <p className="text-xs md:text-sm text-gray-600 font-medium line-clamp-2">{slide.desc}</p>
+                
               </div>
             </div>
           ))}
