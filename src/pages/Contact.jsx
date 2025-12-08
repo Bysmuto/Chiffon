@@ -5,20 +5,20 @@ import { HandwrittenEffect } from "../funcs/Textfx";
 const iconSize = 32;
 
 const socials = [
-  {
-    name: "Instagram",
-    url: "https://instagram.com/chiffoncakecuritiba/",
-    icon: <Instagram size={iconSize} />
-  },
-  {
-    name: "Gmail",
-    url: "https://mail.google.com/mail/?view=cm&fs=1&to=chiffon@gmail.com&su=work&body=i%20am%20interested%20in%20working%20with%20you",
-    icon: <Mail size={iconSize} />
-  },
+  // {
+  //   name: "Instagram",
+  //   url: "https://instagram.com/chiffoncakecuritiba/",
+  //   icon: <Instagram size={iconSize} />
+  // },
+  // {
+  //   name: "Gmail",
+  //   url: "https://mail.google.com/mail/?view=cm&fs=1&to=chiffon@gmail.com&su=work&body=i%20am%20interested%20in%20working%20with%20you",
+  //   icon: <Mail size={iconSize} />
+  // },
 
   {
     name: "Linkedin",
-    url: "https://www.linkedin.com/",
+    url: "http://linkedin.com/in/luthif/",
     icon: <Linkedin size={iconSize} />
   }
 ];

@@ -33,7 +33,11 @@ const logos = [
   {
     name: "",
     icon: <img className="h-[90%] w-[90%]" src="./logos/8.webp" />
-  }
+  },
+   {
+    name: "",
+    icon: <img className="h-[90%] w-[90%]" src="./logos/9.png" />
+  },
 ];
 
 const LogoCarousel = ({ logos = [], speed = 20, className = "", color }) => {
